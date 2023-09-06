@@ -1,3 +1,42 @@
-# EntregaPD
-Entrega del TP1, TP2 y TP3
-Participantes: Abigail Juliana Almirón, Gaspart Sabrina, Salto Tomas
+# Trabajos Practicos - Programacion Web Dinamica
+## Datos del Proyecto
+- **DESCRIPCION:** Trabajos practicos de la materia "Programacion WEB Dinámica"
+- **PROFESORES:** Sanchez Viviana, Pino Maria Laura, Carrasco Claudia
+## Datos Institucionales
+- **NOMBRE Y APELLIDO:** Omar Lestrade
+- **LEGAJO:** FAEA-775
+- **AÑO:** 2º
+- **CUATRIMESTRE:** 1º
+- **CARRERA:** Tecnicatura Universitaria en Desarrollo Web
+- **MATERIA:** Programacion WEB Dinámica
+## Datos del grupo
+- **NOMBRE DEL GRUPO:** 9
+- **INTEGRANTES:** 
+  - Almirón Abigail Juliana -FAI- - @est.fi.uncoma.edu.ar - [GitHub](https://github.com/abialmiron/)
+  - Gaspart Sabrina - FAI- - @est.fi.uncoma.edu.ar - [GitHub](https://github.com/)
+  - Lestrade Zapata Omar - FAEA-775 - omar.lestrade@est.fi.uncoma.edu.ar - [GitHub](https://github.com/Lestradez)
+  - Salto Tomas - FAI- - @est.fi.uncoma.edu.ar - [GitHub](https://github.com/)
+
+
+## Tabla de Contenidos
+### Trabajo Practico 1
+**Descripción:**
+_Bla bla bla_
+- [MENÚ](./TP1/Vista/MENU.html)
+- [Ejercicio 1](./TP1/Vista/vistaej1.html)
+- [Ejercicio 2](./TP1/Vista/vistaej2.html)
+- [Ejercicio 3](./TP1/Vista/vistaej3.html)
+- [Ejercicio 4](./TP1/Vista/vistaej4.html)
+- [Ejercicio 5](./TP1/Vista/vistaej5.html)
+- [Ejercicio 6](./TP1/Vista/vistaej6.html)
+- [Ejercicio 7](./TP1/Vista/vistaej7.html)
+- [Ejercicio 8](./TP1/Vista/vistaej8.html)
+### Trabajo Practico 2
+- [PORTADA](./TP2/ej1.html)
+
+### Trabajo Practico 3
+
+
+
+
+
