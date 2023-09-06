@@ -13,15 +13,18 @@
 - **NOMBRE DEL GRUPO:** 9
 - **INTEGRANTES:** 
   - Almirón Abigail Juliana -FAI- - @est.fi.uncoma.edu.ar - [GitHub](https://github.com/abialmiron/)
-  - Gaspart Sabrina - FAI- - @est.fi.uncoma.edu.ar - [GitHub](https://github.com/)
+  - Gaspart Sabrina - FAI-112 - grethel.gaspart@est.fi.uncoma.edu.ar - [GitHub](https://github.com/sabrinagaspart)
   - Lestrade Zapata Omar - FAEA-775 - omar.lestrade@est.fi.uncoma.edu.ar - [GitHub](https://github.com/Lestradez)
   - Salto Tomas - FAI- - @est.fi.uncoma.edu.ar - [GitHub](https://github.com/)
 
-
 ## Tabla de Contenidos
 ### Trabajo Practico 1
-**Descripción:**
-_Bla bla bla_
+
+![](./assets/img/TP1_PHPHTML_20_Página_1.png)
+![](./assets/img/TP1_PHPHTML_20_Página_2.png)
+
+
+
 - [MENÚ](./TP1/Vista/MENU.html)
 - [Ejercicio 1](./TP1/Vista/vistaej1.html)
 - [Ejercicio 2](./TP1/Vista/vistaej2.html)
@@ -32,11 +35,15 @@ _Bla bla bla_
 - [Ejercicio 7](./TP1/Vista/vistaej7.html)
 - [Ejercicio 8](./TP1/Vista/vistaej8.html)
 ### Trabajo Practico 2
+![](./assets/img/TP2_Validacion_20_Página_1.png)
+![](./assets/img/TP2_Validacion_20_Página_2.png)
+![](./assets/img/TP2_Validacion_20_Página_3.png)
+
 - [PORTADA](./TP2/ej1.html)
 
 ### Trabajo Practico 3
+![](./assets/img/TP3_SubirArchivos.png)
 
-
-
-
-
+- [Ejercicio 1](./TP3/Ej1)
+- [Ejercicio 2](./TP3/Ej2)
+- [Ejercicio 3](./TP3/Ej3)
