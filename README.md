@@ -13,6 +13,7 @@
 - **NOMBRE DEL GRUPO:** 9
 - **INTEGRANTES:** 
   - Almirón Abigail Juliana -FAI- - @est.fi.uncoma.edu.ar - [GitHub](https://github.com/abialmiron/)
+  - Flores Agustina -FAI-3547 - ailen.flores@est.fi.uncoma.edu.ar - [GitHub](https://github.com/agusflores1/)
   - Gaspart Sabrina - FAI-112 - grethel.gaspart@est.fi.uncoma.edu.ar - [GitHub](https://github.com/sabrinagaspart)
   - Lestrade Zapata Omar - FAEA-775 - omar.lestrade@est.fi.uncoma.edu.ar - [GitHub](https://github.com/Lestradez)
   - Salto Tomas - FAI- - @est.fi.uncoma.edu.ar - [GitHub](https://github.com/)
