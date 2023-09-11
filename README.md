@@ -48,3 +48,14 @@
 - [Ejercicio 1](./TP3/Ej1)
 - [Ejercicio 2](./TP3/Ej2)
 - [Ejercicio 3](./TP3/Ej3)
+### Trabajo Practico 4
+
+
+### Cómo ejecutar el proyecto
+- Clonar el repositorio dentro de un servidor web (por ejemplo, XAMPP).
+- Abrir el archivo 'dirs.php' presente en el directorio includes y modificar la constante '$directorio' con la ruta del proyecto.
+- Abrir el naverador web y acceder a la ruta del proyecto.
+- De esta manera ya podrán verse y ejecutarse los primeros tres trabajos prácticos.
+- Para poder ejecutar el cuarto trabajo práctico se debe crear una base de datos con el nombre 'infoautos' y ejecutar el script 'tp4.sql' presente en el directorio 'TP4'.
+
+
