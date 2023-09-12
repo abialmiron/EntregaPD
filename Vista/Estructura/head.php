@@ -1,6 +1,3 @@
-<?php
-include_once 'dirs.php';
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

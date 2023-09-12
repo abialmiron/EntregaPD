@@ -1,9 +1,11 @@
 <?php
-include_once('includes/head.php');
+include_once 'includes/dirs.php';
+include_once(STRUCTURE_PATH.'head.php');
 ?>
         <main class="p-5 text-center bg-light">
           <h1 class="mb-3">Programación Web Dinámica 2023 - Universidad del Comahue</h1>
-          <h4 class="mb-3">Trabajos Prácticos 1, 2, 3 y 4</h4>
+          <h4 class="mb-3">Trabajos Prácticos 1, 2, 3 y 4 realizados durante el cursado de la materia.</h4>
+          <p>Se desarrollan prácticas con PHP y base de datos MYSQL, se utilizó la arquitectura MVC, AJAX, Bootstrap, PDO y GitHub.</p>
             <div class="row justify-content-md-center align-items-center gx-3 gy-3 p-5">
               <h2 class="mb-3">GRUPO 9 - Integrantes</h2>  
               <div class=" col-lg-4 col-sm-6 col-12" >
@@ -110,7 +112,7 @@ include_once('includes/head.php');
 </main>
       
     <?php
-      include 'includes/footer.php';
+      include STRUCTURE_PATH.'footer.php';
     ?>
 
 

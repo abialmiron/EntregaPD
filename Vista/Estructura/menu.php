@@ -15,7 +15,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item text-black" href="<?php echo BASE_URL ?>TP1">Trabajo Práctico 1</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>TP1/Vista/vistaej1.html">Ejercicio 1</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP1/Ejercicio1/index.php">Ejercicio 1</a></li>
             <li><a class="dropdown-item" href="<?php echo BASE_URL ?>TP1/Vista/vistaej2.html">Ejercicio 2</a></li>
             <li><a class="dropdown-item" href="<?php echo BASE_URL ?>TP1/Vista/vistaej3.html">Ejercicio 3</a></li>
             <li><a class="dropdown-item" href="<?php echo BASE_URL ?>TP1/Vista/vistaej4.html">Ejercicio 4</a></li>
