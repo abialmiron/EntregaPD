@@ -1,6 +1,9 @@
-<?php  include_once ("../Estructura/cabecera.php"); ?>
+<?php
+include_once("../../../includes/configuracion.php");
+include_once(STRUCTURE_PATH . "head.php");
+?>
 
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"  style="margin-top: 10px;">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-top: 10px;">
     <div class="card col-sm-10 p-3">
         <div class="card-header">
             <h3 class="text-primary">Ingresar Persona:</h3>
@@ -12,8 +15,8 @@
                         <label class="form-label">Nombre:</label>
                         <input type="text" name="nombre" id="nombre" class="form-control validate" maxlength="30">
                         <div class="invalid-feedback">
-                        Por favor, ingrese caracteres validos.
-                       </div>
+                            Por favor, ingrese caracteres validos.
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <label class="form-label">Apellido:</label>
@@ -54,13 +57,13 @@
                         </div>
                     </div>
                 </div>
-                    <div class="col-md-7 mt-3 d-flex justify-content-end">
-                        <button class="btn btn-primary me-md-2" type="submit" id="Enviar" name="Enviar">Enviar</button>
-                        <button class="btn btn-light" type="reset" name="reset" id="reset">Borrar</button>
-                    </div>
+                <div class="col-md-7 mt-3 d-flex justify-content-end">
+                    <button class="btn btn-primary me-md-2" type="submit" id="Enviar" name="Enviar">Enviar</button>
+                    <button class="btn btn-light" type="reset" name="reset" id="reset">Borrar</button>
                 </div>
-            </form>
         </div>
+        </form>
+    </div>
     </div>
 </main>
-<?php include ("../Estructura/pie.php"); ?>
+<?php include(STRUCTURE_PATH . "footer.php"); ?>

@@ -19,7 +19,7 @@
             foreach ($autos as $auto) {
               ?>     
                 <div class=" col-lg-3 col-sm-6 col-12" >
-                    <div class="card shadow"" >
+                    <div class="card shadow" >
                       <div class="card-header">
                         <h4 class="card-title text-center"><?php echo $auto->getPatente(); ?></h4>
                       </div>

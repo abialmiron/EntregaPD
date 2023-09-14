@@ -1,9 +1,9 @@
 <?php
-include_once("../Estructura/cabecera.php");
-include_once('../../Control/ControlPersona.php');
-include_once '../../configuracion.php';
+include_once("../../../includes/configuracion.php");
+include_once(STRUCTURE_PATH . "head.php");
+include_once('../../../Control/TP4/ControlPersona.php');
 ?>
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5"  style="margin-top: 10px;">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5" style="margin-top: 10px;">
     <div class="card w-50 mb-5">
         <div class="card-body mb-5">
             <div class="d-flex justify-content-between align-items-center">
@@ -31,4 +31,4 @@ include_once '../../configuracion.php';
         </div>
     </div>
 </main>
-<?php include("../Estructura/pie.php"); ?>
+<?php include(STRUCTURE_PATH . "footer.php"); ?>
