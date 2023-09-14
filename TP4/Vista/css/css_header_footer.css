@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
+
+.quitar_margin_padding{
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+
+
+    padding: 0px;
+}
+.my-4{
+    margin-bottom: 0px;
+}
+
+
+
+.logitos{
+    
+    height: 40px;
+    width: 40px;
+
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+#footer{
+    margin-bottom: 0px;
+    
+    background-color: rgb(151, 151, 151);
+    
+}
+
+#fai_logo{
+    background-image: url("logos/fai_logo.png");
+    background-position: center;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    
+}
+
+
+
+footer li{
+    height: 50px;
+}
+/* header */
+#header{
+    background-color: rgb(151, 151, 151);
+}
+
+/*  */
