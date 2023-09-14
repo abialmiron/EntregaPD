@@ -8,7 +8,7 @@
 <?php 
   include_once ("links.php");
   ?>
-    <body class="vh-100 bg-light">
+    <body class="bg-light">
       <header class="mb-5">
         <?php
           include_once 'menu.php';

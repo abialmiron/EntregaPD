@@ -1,5 +1,5 @@
 <?php  
-include_once ("../../../includes/dirs.php");
+include_once ("../../../includes/configuracion.php");
 include_once (STRUCTURE_PATH."head.php");
 ?>
 

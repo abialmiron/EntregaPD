@@ -57,13 +57,13 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item text-black" href="<?php echo BASE_URL ?>Vista/TP4/">Trabajo Práctico 4</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio3/verAutos.php">Ejercicio 3</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio4/buscarAuto.php">Ejercicio 4</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio5/listaPersonas.php">Ejercicio 5</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio6/NuevaPersona.php">Ejercicio 6</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio7/NuevoAuto.php">Ejercicio 7</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio8/CambioDuenio.php">Ejercicio 8</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio9/BuscarPersona.php">Ejercicio 9</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio3/verAutos.php">Ejercicio 3 - Ver Autos</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio4/buscarAuto.php">Ejercicio 4 - Buscar auto</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio5/listaPersonas.php">Ejercicio 5 - Listar Personas</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio6/NuevaPersona.php">Ejercicio 6 - Nueva Persona</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio7/NuevoAuto.php">Ejercicio 7 - Nuevo Auto</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio8/CambioDuenio.php">Ejercicio 8 - Cambio de Dueño</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio9/BuscarPersona.php">Ejercicio 9 - Buscar Persona</a></li>
           </ul>
         </li>
       </ul>

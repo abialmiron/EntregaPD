@@ -46,6 +46,7 @@ function __autoload($class_name){
 spl_autoload_register(function($class_name) {
     $directorys = array(
         $_SESSION['ROOT'].'Modelo/',
+        $_SESSION['ROOT'].'Modelo/TP4/',
         $_SESSION['ROOT'].'Modelo/conector/',
         $_SESSION['ROOT'].'Control/',
       //  $GLOBALS['ROOT'].'util/class/',
@@ -53,7 +54,7 @@ spl_autoload_register(function($class_name) {
     //print_object($directorys) ;
     foreach($directorys as $directory){
         if(file_exists($directory.$class_name . '.php')){
-            // echo "se incluyo".$directory.$class_name . '.php';
+            //  echo "se incluyo".$directory.$class_name . '.php';
             require_once($directory.$class_name . '.php');
             return;
         }
