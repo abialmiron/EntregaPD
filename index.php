@@ -1,5 +1,5 @@
 <?php
-include_once 'includes/dirs.php';
+include_once 'includes/configuracion.php';
 include_once(STRUCTURE_PATH.'head.php');
 ?>
         <main class="p-5 text-center bg-light">
@@ -15,7 +15,7 @@ include_once(STRUCTURE_PATH.'head.php');
                   </div>
                   <div class="card-body">
                       <p class="card-text text-start fs-6">
-                        <i class="bi bi-mortarboard-fill fs-5"></i> <span>Legajo: FAI-</span>
+                        <i class="bi bi-mortarboard-fill fs-5"></i> <span>Legajo: FAI-3147</span>
                       </p>
                       <p class="card-text text-start fs-6">
                         <i class="bi bi-envelope-at-fill fs-5 "></i> <span>Email: abigail.almiron@est.fi.uncoma.edu.ar</span>

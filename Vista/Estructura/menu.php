@@ -55,11 +55,15 @@
             Trabajo Práctico 4
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item text-black" href="<?php echo BASE_URL ?>tp_4/">Trabajo Práctico 4</a></li>
+            <li><a class="dropdown-item text-black" href="<?php echo BASE_URL ?>Vista/TP4/">Trabajo Práctico 4</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>tp_4/ejercicio_1">Ejercicio 1</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>tp_4/ejercicio_2">Ejercicio 2</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>tp_4/ejercicio_3">Ejercicio 3</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio3/verAutos.php">Ejercicio 3</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio4/buscarAuto.php">Ejercicio 4</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio5/listaPersonas.php">Ejercicio 5</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio6/NuevaPersona.php">Ejercicio 6</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio7/NuevoAuto.php">Ejercicio 7</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio8/CambioDuenio.php">Ejercicio 8</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP4/Ejercicio9/BuscarPersona.php">Ejercicio 9</a></li>
           </ul>
         </li>
       </ul>

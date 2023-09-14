@@ -1,6 +1,6 @@
     <?php
     include_once ("../../../includes/dirs.php");
-    include_once("../../../utiles/funciones.php");
+    include_once("../../../util/funciones.php");
     include_once ('../../../Control/TP1/Ejercicio1/control.php');
     include_once (STRUCTURE_PATH."head.php");
     ?>
