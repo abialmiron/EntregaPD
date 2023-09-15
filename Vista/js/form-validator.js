@@ -134,132 +134,132 @@
 
 
 
-    // function validateCinemasTitle(titleInput) {
-    //     // Debe tener al menos 4 caracteres
-    //     if (titleInput.value.length < 4) {
-    //         titleInput.setCustomValidity("El título debe tener al menos 4 caracteres.")
-    //         return false
-    //     }
+    function validateCinemasTitle(titleInput) {
+        // Debe tener al menos 4 caracteres
+        if (titleInput.value.length < 4) {
+            titleInput.setCustomValidity("El título debe tener al menos 4 caracteres.")
+            return false
+        }
 
-    //     // No debe tener espacios en blanco al principio o al final
-    //     if (titleInput.value.trim() !== titleInput.value) {
-    //         titleInput.setCustomValidity("El título no debe tener espacios en blanco al principio o al final.")
-    //         return false
-    //     }
+        // No debe tener espacios en blanco al principio o al final
+        if (titleInput.value.trim() !== titleInput.value) {
+            titleInput.setCustomValidity("El título no debe tener espacios en blanco al principio o al final.")
+            return false
+        }
 
-    //     // No debe tener espacios en blanco consecutivos
-    //     if (titleInput.value.indexOf("  ") !== -1) {
-    //         titleInput.setCustomValidity("El título no debe tener espacios en blanco consecutivos.")
-    //         return false
-    //     }
+        // No debe tener espacios en blanco consecutivos
+        if (titleInput.value.indexOf("  ") !== -1) {
+            titleInput.setCustomValidity("El título no debe tener espacios en blanco consecutivos.")
+            return false
+        }
 
-    //     // El título es válido
-    //     titleInput.setCustomValidity("")
-    //     return true
-    // }
+        // El título es válido
+        titleInput.setCustomValidity("")
+        return true
+    }
 
-    // function validateCinemasDescription(descriptionInput) {
-    //     // Debe tener al menos 20 caracteres
-    //     if (descriptionInput.value.length < 20) {
-    //         descriptionInput.setCustomValidity("La descripción debe tener al menos 20 caracteres.")
-    //         return false
-    //     }
+    function validateCinemasDescription(descriptionInput) {
+        // Debe tener al menos 20 caracteres
+        if (descriptionInput.value.length < 20) {
+            descriptionInput.setCustomValidity("La descripción debe tener al menos 20 caracteres.")
+            return false
+        }
 
-    //     // No debe tener espacios en blanco al principio o al final
-    //     if (descriptionInput.value.trim() !== descriptionInput.value) {
-    //         descriptionInput.setCustomValidity("La descripción no debe tener espacios en blanco al principio o al final.")
-    //         return false
-    //     }
+        // No debe tener espacios en blanco al principio o al final
+        if (descriptionInput.value.trim() !== descriptionInput.value) {
+            descriptionInput.setCustomValidity("La descripción no debe tener espacios en blanco al principio o al final.")
+            return false
+        }
 
-    //     // No debe tener espacios en blanco consecutivos
-    //     if (descriptionInput.value.indexOf("  ") !== -1) {
-    //         descriptionInput.setCustomValidity("La descripción no debe tener espacios en blanco consecutivos.")
-    //         return false
-    //     }
+        // No debe tener espacios en blanco consecutivos
+        if (descriptionInput.value.indexOf("  ") !== -1) {
+            descriptionInput.setCustomValidity("La descripción no debe tener espacios en blanco consecutivos.")
+            return false
+        }
 
-    //     // La descripción es válida
-    //     descriptionInput.setCustomValidity("")
-    //     return true
-    // }
+        // La descripción es válida
+        descriptionInput.setCustomValidity("")
+        return true
+    }
 
-    // function validateCinemasGenre(genreInput) {
-    //     // Debe estar seleccionado un género
-    //     if (genreInput.value === "") {
-    //         genreInput.setCustomValidity("Debe seleccionar un género.")
-    //         return false
-    //     }
+    function validateCinemasGenre(genreInput) {
+        // Debe estar seleccionado un género
+        if (genreInput.value === "") {
+            genreInput.setCustomValidity("Debe seleccionar un género.")
+            return false
+        }
 
-    //     // El género es válido
-    //     genreInput.setCustomValidity("")
-    //     return true
-    // }
+        // El género es válido
+        genreInput.setCustomValidity("")
+        return true
+    }
 
-    // function validateCinemasDuration(durationInput) {
-    //     // Debe ser un número
-    //     if (isNaN(durationInput.value)) {
-    //         durationInput.setCustomValidity("La duración debe ser un número.")
-    //         return false
-    //     }
+    function validateCinemasDuration(durationInput) {
+        // Debe ser un número
+        if (isNaN(durationInput.value)) {
+            durationInput.setCustomValidity("La duración debe ser un número.")
+            return false
+        }
 
-    //     // Debe ser mayor a 0
-    //     if (durationInput.value <= 0) {
-    //         durationInput.setCustomValidity("La duración debe ser mayor a 0.")
-    //         return false
-    //     }
+        // Debe ser mayor a 0
+        if (durationInput.value <= 0) {
+            durationInput.setCustomValidity("La duración debe ser mayor a 0.")
+            return false
+        }
 
-    //     // La duración es válida
-    //     durationInput.setCustomValidity("")
-    //     return true
-    // }
+        // La duración es válida
+        durationInput.setCustomValidity("")
+        return true
+    }
 
-    // function validateCinemasYear(yearInput) {
-    //     // Debe ser un número
-    //     if (isNaN(yearInput.value)) {   
-    //         yearInput.setCustomValidity("El año debe ser un número.")
-    //         return false
-    //     }
+    function validateCinemasYear(yearInput) {
+        // Debe ser un número
+        if (isNaN(yearInput.value)) {   
+            yearInput.setCustomValidity("El año debe ser un número.")
+            return false
+        }
         
-    //     // Debe ser mayor a 1900
-    //     if (yearInput.value < 1900) {
-    //         yearInput.setCustomValidity("El año debe ser mayor a 1900.")
-    //         return false
-    //     }
+        // Debe ser mayor a 1900
+        if (yearInput.value < 1900) {
+            yearInput.setCustomValidity("El año debe ser mayor a 1900.")
+            return false
+        }
 
-    //     // Debe ser menor al año actual
-    //     if (yearInput.value > new Date().getFullYear()) {
-    //         yearInput.setCustomValidity("El año debe ser menor al año actual.")
-    //         return false
-    //     }
+        // Debe ser menor al año actual
+        if (yearInput.value > new Date().getFullYear()) {
+            yearInput.setCustomValidity("El año debe ser menor al año actual.")
+            return false
+        }
 
-    //     // El año es válido
-    //     yearInput.setCustomValidity("")
-    //     return true
-    // }
+        // El año es válido
+        yearInput.setCustomValidity("")
+        return true
+    }
 
-    // function validateCinemasRating(ratingInput) {
-    //     // Debe ser un número
-    //     if (isNaN(ratingInput.value)) {
-    //         ratingInput.setCustomValidity("El rating debe ser un número.")
-    //         return false
-    //     }
+    function validateCinemasRating(ratingInput) {
+        // Debe ser un número
+        if (isNaN(ratingInput.value)) {
+            ratingInput.setCustomValidity("El rating debe ser un número.")
+            return false
+        }
 
-    //     // Debe ser mayor a 0
+        // Debe ser mayor a 0
 
-    //     if (ratingInput.value <= 0) {
-    //         ratingInput.setCustomValidity("El rating debe ser mayor a 0.")
-    //         return false              
-    //     }
+        if (ratingInput.value <= 0) {
+            ratingInput.setCustomValidity("El rating debe ser mayor a 0.")
+            return false              
+        }
 
-    //     // Debe ser menor o igual a 10
-    //     if (ratingInput.value > 10) {
-    //         ratingInput.setCustomValidity("El rating debe ser menor o igual a 10.")
-    //         return false
-    //     }
+        // Debe ser menor o igual a 10
+        if (ratingInput.value > 10) {
+            ratingInput.setCustomValidity("El rating debe ser menor o igual a 10.")
+            return false
+        }
 
-    //     // El rating es válido
-    //     ratingInput.setCustomValidity("")
-    //     return true
-    // }
+        // El rating es válido
+        ratingInput.setCustomValidity("")
+        return true
+    }
 
     // function validateCinemasImage(imageInput) {
     //     // Debe ser un archivo de imagen
