@@ -1,7 +1,7 @@
 <?php
-include_once("../Estructura/cabecera.php");
-include_once('../../Control/ControlAuto.php');
-include_once('../../configuracion.php');
+include_once("../../../includes/configuracion.php");
+include_once(STRUCTURE_PATH . "head.php");
+include_once(ROOT_PATH.'/Control/TP4/ControlAuto.php');
 
 $datos = data_submitted();
 $auto = new ControlAuto();
@@ -28,19 +28,21 @@ if ($autoEncontrado) {
 }
 ?>
 
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-4" style="margin-top: 10px;">
-    <div class="card w-50 mb-4">
+<main class="p-5 text-center bg-light">
+  <div class="justify-content-md-center align-items-center ">
+    <div class="card shadow col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto">
+        <div class="card-header">
+            <h3>Datos</h3>
+        </div> 
         <div class="card-body">
-            <h5 class="card-title">Datos:</h5>
             <?php echo $tabla; ?>
             <div class="d-flex justify-content-end align-items-end mt-4">
-                <a href="buscarAutos.php" class="btn btn-primary">Volver</a>
+                <a href="buscarAuto.php" class="btn btn-primary">Volver</a>
             </div>
         </div>
     </div>
+</div>
 </main>
 
 
-<?php
-include("../Estructura/pie.php");
-?>
+<?php include(STRUCTURE_PATH . "footer.php"); ?>

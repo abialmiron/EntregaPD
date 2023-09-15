@@ -1,4 +1,4 @@
-(function () {
+ (function () {
   'use strict'
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -8,25 +8,37 @@
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
-        // Check if the password is valid
+
+        // Verifica que el password sea correcto
+        if (form.querySelector('input[name="password"]'))
         if (!validatePassword(form.querySelector('input[name="password"]'))) {
           event.preventDefault()
           event.stopPropagation()
         }
 
         // Verifica que el usuario sea correcto
+        if (form.querySelector('input[name="usuario"]'))
         if (!validateUser(form.querySelector('input[name="usuario"]'))) {
             event.preventDefault()
             event.stopPropagation()
         }
         
         // Verifica que el titulo sea correcto
+        if (form.querySelector('input[name="titulo"]'))
         if (!validateCinemasTitle(form.querySelector('input[name="titulo"]'))) {
             event.preventDefault()
             event.stopPropagation()
         }
 
-        // Check if the other fields are valid
+        // Verifica que la patente sea válida, debe tener tres letras y tres números sin espacios ni caracteres especiales
+        // si existe el campo patente
+        if (form.querySelector('input[name="patente"]'))
+        if (!validatePatente(form.querySelector('input[name="patente"]'))) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+        
+        // Verfica que otros campos sean válidos
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
@@ -46,202 +58,220 @@
 
 		// No debe tener espacios en blanco
 		if (userInput.value.indexOf(" ") !== -1) {
-			userInput.setCustomValidity("El nombre de usuario no debe tener espacios en blanco.")
+            userInput.setCustomValidity("El nombre de usuario no debe tener espacios en blanco.")
 			return false
 		}
-
+        
 		// No debe tener caracteres especiales
 		if (!/^[a-zA-Z0-9]+$/.test(userInput.value)) {
-			userInput.setCustomValidity("El nombre de usuario no debe tener caracteres especiales.")
+            userInput.setCustomValidity("El nombre de usuario no debe tener caracteres especiales.")
 			return false
 		}
-
+        
 		// El nombre de usuario es válido
 		userInput.setCustomValidity("")
 		return true
 	}
 	
-
-  function validatePassword(passwordInput) {
-    // Debe tener al menos 8 caracteres
-    if (passwordInput.value.length < 8) {
-      passwordInput.setCustomValidity("La contraseña debe tener al menos 8 caracteres.")
-      return false
-    }
-  
-    // Deber tener al menos una letra mayúscula
-    if (!/[A-Z]+/.test(passwordInput.value)) {
-			passwordInput.setCustomValidity("La contraseña debe tener al menos una letra mayúscula.")
-      return false
-    }
-  
-    // Debe tener al menos un número
-    if (!/[0-9]+/.test(passwordInput.value)) {
-      passwordInput.setCustomValidity("La contraseña debe tener al menos un número.")
-      return false
-    }
-  
-    // Debe tener al menos un caracter especial
-    if (!/[!@#$%^&*()_+-={}|;:,.<>/?`~]/.test(passwordInput.value)) {
-      passwordInput.setCustomValidity("La contraseña debe tener al menos un símbolo.")
-      return false
-    }
-
-		// Debe ser distinta al nombre de usuario
-		if (passwordInput.value === document.getElementById("usuario").value) {
-			passwordInput.setCustomValidity("La contraseña debe ser distinta al nombre de usuario.")
-			return false
-		}
-  
-    // La contraseña es válida
-    passwordInput.setCustomValidity("")
-    return true
-  }
-
-
-
-
-
-
-
-    function validateCinemasTitle(titleInput) {
-        // Debe tener al menos 4 caracteres
-        if (titleInput.value.length < 4) {
-            titleInput.setCustomValidity("El título debe tener al menos 4 caracteres.")
-            return false
-        }
-
-        // No debe tener espacios en blanco al principio o al final
-        if (titleInput.value.trim() !== titleInput.value) {
-            titleInput.setCustomValidity("El título no debe tener espacios en blanco al principio o al final.")
-            return false
-        }
-
-        // No debe tener espacios en blanco consecutivos
-        if (titleInput.value.indexOf("  ") !== -1) {
-            titleInput.setCustomValidity("El título no debe tener espacios en blanco consecutivos.")
-            return false
-        }
-
-        // El título es válido
-        titleInput.setCustomValidity("")
-        return true
-    }
-
-    function validateCinemasDescription(descriptionInput) {
-        // Debe tener al menos 20 caracteres
-        if (descriptionInput.value.length < 20) {
-            descriptionInput.setCustomValidity("La descripción debe tener al menos 20 caracteres.")
-            return false
-        }
-
-        // No debe tener espacios en blanco al principio o al final
-        if (descriptionInput.value.trim() !== descriptionInput.value) {
-            descriptionInput.setCustomValidity("La descripción no debe tener espacios en blanco al principio o al final.")
-            return false
-        }
-
-        // No debe tener espacios en blanco consecutivos
-        if (descriptionInput.value.indexOf("  ") !== -1) {
-            descriptionInput.setCustomValidity("La descripción no debe tener espacios en blanco consecutivos.")
-            return false
-        }
-
-        // La descripción es válida
-        descriptionInput.setCustomValidity("")
-        return true
-    }
-
-    function validateCinemasGenre(genreInput) {
-        // Debe estar seleccionado un género
-        if (genreInput.value === "") {
-            genreInput.setCustomValidity("Debe seleccionar un género.")
-            return false
-        }
-
-        // El género es válido
-        genreInput.setCustomValidity("")
-        return true
-    }
-
-    function validateCinemasDuration(durationInput) {
-        // Debe ser un número
-        if (isNaN(durationInput.value)) {
-            durationInput.setCustomValidity("La duración debe ser un número.")
-            return false
-        }
-
-        // Debe ser mayor a 0
-        if (durationInput.value <= 0) {
-            durationInput.setCustomValidity("La duración debe ser mayor a 0.")
-            return false
-        }
-
-        // La duración es válida
-        durationInput.setCustomValidity("")
-        return true
-    }
-
-    function validateCinemasYear(yearInput) {
-        // Debe ser un número
-        if (isNaN(yearInput.value)) {   
-            yearInput.setCustomValidity("El año debe ser un número.")
+    
+    function validatePassword(passwordInput) {
+        // Debe tener al menos 8 caracteres
+        if (passwordInput.value.length < 8) {
+            passwordInput.setCustomValidity("La contraseña debe tener al menos 8 caracteres.")
             return false
         }
         
-        // Debe ser mayor a 1900
-        if (yearInput.value < 1900) {
-            yearInput.setCustomValidity("El año debe ser mayor a 1900.")
+        // Deber tener al menos una letra mayúscula
+        if (!/[A-Z]+/.test(passwordInput.value)) {
+            passwordInput.setCustomValidity("La contraseña debe tener al menos una letra mayúscula.")
+            return false
+        }
+        
+        // Debe tener al menos un número
+        if (!/[0-9]+/.test(passwordInput.value)) {
+            passwordInput.setCustomValidity("La contraseña debe tener al menos un número.")
+            return false
+        }
+        
+        // Debe tener al menos un caracter especial
+        if (!/[!@#$%^&*()_+-={}|;:,.<>/?`~]/.test(passwordInput.value)) {
+            passwordInput.setCustomValidity("La contraseña debe tener al menos un símbolo.")
+            return false
+        }
+        
+		// Debe ser distinta al nombre de usuario
+		if (passwordInput.value === document.getElementById("usuario").value) {
+            passwordInput.setCustomValidity("La contraseña debe ser distinta al nombre de usuario.")
+			return false
+		}
+        
+        // La contraseña es válida
+        passwordInput.setCustomValidity("")
+        return true
+    }
+    
+    
+    function validatePatente(patenteInput) {
+        // Debe tener exactamente 6 caracteres
+        if (patenteInput.value.length !== 6) {
+            patenteInput.setCustomValidity("La patente debe tener exactamente 6 caracteres.")
             return false
         }
 
-        // Debe ser menor al año actual
-        if (yearInput.value > new Date().getFullYear()) {
-            yearInput.setCustomValidity("El año debe ser menor al año actual.")
+        // Debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden
+        if (!/^[A-Za-z]{3}[0-9]{3}$/.test(patenteInput.value)) {
+            patenteInput.setCustomValidity("La patente debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden.")
             return false
         }
 
-        // El año es válido
-        yearInput.setCustomValidity("")
+        // La patente es válida
+        patenteInput.setCustomValidity("")
         return true
     }
 
-    function validateCinemasRating(ratingInput) {
-        // Debe ser un número
-        if (isNaN(ratingInput.value)) {
-            ratingInput.setCustomValidity("El rating debe ser un número.")
-            return false
-        }
 
-        // Debe ser mayor a 0
 
-        if (ratingInput.value <= 0) {
-            ratingInput.setCustomValidity("El rating debe ser mayor a 0.")
-            return false              
-        }
 
-        // Debe ser menor o igual a 10
-        if (ratingInput.value > 10) {
-            ratingInput.setCustomValidity("El rating debe ser menor o igual a 10.")
-            return false
-        }
 
-        // El rating es válido
-        ratingInput.setCustomValidity("")
-        return true
-    }
 
-    function validateCinemasImage(imageInput) {
-        // Debe ser un archivo de imagen
-        if (!/\.(jpg|jpeg|png|gif)$/i.test(imageInput.value)) {
-            imageInput.setCustomValidity("Debe seleccionar un archivo de imagen.")
-            return false
-        }
+    // function validateCinemasTitle(titleInput) {
+    //     // Debe tener al menos 4 caracteres
+    //     if (titleInput.value.length < 4) {
+    //         titleInput.setCustomValidity("El título debe tener al menos 4 caracteres.")
+    //         return false
+    //     }
 
-        // La imagen es válida
-        imageInput.setCustomValidity("")
-        return true
-    }
+    //     // No debe tener espacios en blanco al principio o al final
+    //     if (titleInput.value.trim() !== titleInput.value) {
+    //         titleInput.setCustomValidity("El título no debe tener espacios en blanco al principio o al final.")
+    //         return false
+    //     }
+
+    //     // No debe tener espacios en blanco consecutivos
+    //     if (titleInput.value.indexOf("  ") !== -1) {
+    //         titleInput.setCustomValidity("El título no debe tener espacios en blanco consecutivos.")
+    //         return false
+    //     }
+
+    //     // El título es válido
+    //     titleInput.setCustomValidity("")
+    //     return true
+    // }
+
+    // function validateCinemasDescription(descriptionInput) {
+    //     // Debe tener al menos 20 caracteres
+    //     if (descriptionInput.value.length < 20) {
+    //         descriptionInput.setCustomValidity("La descripción debe tener al menos 20 caracteres.")
+    //         return false
+    //     }
+
+    //     // No debe tener espacios en blanco al principio o al final
+    //     if (descriptionInput.value.trim() !== descriptionInput.value) {
+    //         descriptionInput.setCustomValidity("La descripción no debe tener espacios en blanco al principio o al final.")
+    //         return false
+    //     }
+
+    //     // No debe tener espacios en blanco consecutivos
+    //     if (descriptionInput.value.indexOf("  ") !== -1) {
+    //         descriptionInput.setCustomValidity("La descripción no debe tener espacios en blanco consecutivos.")
+    //         return false
+    //     }
+
+    //     // La descripción es válida
+    //     descriptionInput.setCustomValidity("")
+    //     return true
+    // }
+
+    // function validateCinemasGenre(genreInput) {
+    //     // Debe estar seleccionado un género
+    //     if (genreInput.value === "") {
+    //         genreInput.setCustomValidity("Debe seleccionar un género.")
+    //         return false
+    //     }
+
+    //     // El género es válido
+    //     genreInput.setCustomValidity("")
+    //     return true
+    // }
+
+    // function validateCinemasDuration(durationInput) {
+    //     // Debe ser un número
+    //     if (isNaN(durationInput.value)) {
+    //         durationInput.setCustomValidity("La duración debe ser un número.")
+    //         return false
+    //     }
+
+    //     // Debe ser mayor a 0
+    //     if (durationInput.value <= 0) {
+    //         durationInput.setCustomValidity("La duración debe ser mayor a 0.")
+    //         return false
+    //     }
+
+    //     // La duración es válida
+    //     durationInput.setCustomValidity("")
+    //     return true
+    // }
+
+    // function validateCinemasYear(yearInput) {
+    //     // Debe ser un número
+    //     if (isNaN(yearInput.value)) {   
+    //         yearInput.setCustomValidity("El año debe ser un número.")
+    //         return false
+    //     }
+        
+    //     // Debe ser mayor a 1900
+    //     if (yearInput.value < 1900) {
+    //         yearInput.setCustomValidity("El año debe ser mayor a 1900.")
+    //         return false
+    //     }
+
+    //     // Debe ser menor al año actual
+    //     if (yearInput.value > new Date().getFullYear()) {
+    //         yearInput.setCustomValidity("El año debe ser menor al año actual.")
+    //         return false
+    //     }
+
+    //     // El año es válido
+    //     yearInput.setCustomValidity("")
+    //     return true
+    // }
+
+    // function validateCinemasRating(ratingInput) {
+    //     // Debe ser un número
+    //     if (isNaN(ratingInput.value)) {
+    //         ratingInput.setCustomValidity("El rating debe ser un número.")
+    //         return false
+    //     }
+
+    //     // Debe ser mayor a 0
+
+    //     if (ratingInput.value <= 0) {
+    //         ratingInput.setCustomValidity("El rating debe ser mayor a 0.")
+    //         return false              
+    //     }
+
+    //     // Debe ser menor o igual a 10
+    //     if (ratingInput.value > 10) {
+    //         ratingInput.setCustomValidity("El rating debe ser menor o igual a 10.")
+    //         return false
+    //     }
+
+    //     // El rating es válido
+    //     ratingInput.setCustomValidity("")
+    //     return true
+    // }
+
+    // function validateCinemasImage(imageInput) {
+    //     // Debe ser un archivo de imagen
+    //     if (!/\.(jpg|jpeg|png|gif)$/i.test(imageInput.value)) {
+    //         imageInput.setCustomValidity("Debe seleccionar un archivo de imagen.")
+    //         return false
+    //     }
+
+    //     // La imagen es válida
+    //     imageInput.setCustomValidity("")
+    //     return true
+    // }
 
 
 
@@ -291,15 +321,15 @@
 
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.getElementById("sidebar");
-    const sidebarToggle = document.getElementById("sidebarToggle");
+//   document.addEventListener("DOMContentLoaded", function () {
+//     const sidebar = document.getElementById("sidebar");
+//     const sidebarToggle = document.getElementById("sidebarToggle");
   
-    // Agregar un evento al botón para mostrar/ocultar el sidebar
-    sidebarToggle.addEventListener("click", function () {
-        sidebar.classList.toggle("d-none");
-    });
-  });
+//     // Agregar un evento al botón para mostrar/ocultar el sidebar
+//     sidebarToggle.addEventListener("click", function () {
+//         sidebar.classList.toggle("d-none");
+//     });
+//   });
   
   
   function validarFormulario() {
@@ -336,6 +366,7 @@
   //Jquery
   
   $(document).ready(function () {
+
     $("#form6").submit(function (e) {
         var isValid = true;
         $("#nombre, #apellido, #DNI, #telefono, #fechaNac, #domicilio").each(function () {
