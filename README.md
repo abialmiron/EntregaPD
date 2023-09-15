@@ -32,9 +32,9 @@
 - [Ejercicio 7](./TP1/Vista/vistaej7.html)
 - [Ejercicio 8](./TP1/Vista/vistaej8.html)
 ### Trabajo Practico 2
-![](./assets/img/TP2_Validacion_Bootstrap_20_Página_1.png)
-![](./assets/img/TP2_Validacion_Bootstrap_20_Página_2.png)
-![](./assets/img/TP2_Validacion_Bootstrap_20_Página_3.png)
+![](./assets/img/TP2_Validacion_BootStrap_20_Página_1.png)
+![](./assets/img/TP2_Validacion_BootStrap_20_Página_2.png)
+![](./assets/img/TP2_Validacion_BootStrap_20_Página_3.png)
 
 - [PORTADA](./TP2/ej1.html)
 
