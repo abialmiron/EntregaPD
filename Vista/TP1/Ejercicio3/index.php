@@ -8,7 +8,7 @@ include_once(STRUCTURE_PATH . "head.php");
 			<h3 class="text-primary">Formulario:</h3> 
         </div>
 		<div class="card-body">
-        <form class="d-flex flex-column needs-validation" method="GET" action="ej3.php" id="form3" name="form3" >
+        <form class="d-flex flex-column needs-validation" method="GET" action="accionej3.php" id="form3" name="form3" >
             <div class="col-md-3">
 			<label class="form-label">Nombre:</label>
 			<input type="text" name="nombre" id="nombre" class="form-control validate" maxlength="30">
