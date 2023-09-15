@@ -9,7 +9,7 @@ include_once(STRUCTURE_PATH . "head.php");
             <h3 class="text-primary">Buscar persona:</h3>
         </div>
         <div class="card-body">
-            <form class="needs-validation" novalidate method="get" action="accionBuscarPersona.php" name="form" id="form" onsubmit="return validarDni()">
+            <form class="needs-validation" novalidate method="get" action="accionBuscarPersona.php" name="form" id="form" onchange="return validarDni()" onsubmit="return validarDni()">
                 <div class="form-group row col-md-9">
                     <label>Ingrese un DNI:</label>
                     <div class="col-md-5">

@@ -351,7 +351,9 @@
 function validarDni() {
   var dniInput = document.getElementById("DNI");
   var dniValue = dniInput.value.trim();
+  var form = document.getElementById("form");
 
+  form.classList.remove("was-validated");
   if (dniValue === "" || isNaN(dniValue) || dniValue.length != 8) {
     dniInput.classList.remove("is-valid");
     dniInput.classList.add("is-invalid");
