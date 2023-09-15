@@ -1,24 +1,18 @@
 <?php
-include_once("../../../../includes/configuracion.php");
+include_once("../../../includes/configuracion.php");
 include_once(STRUCTURE_PATH . "head.php");
 ?>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-<main class="col-md-9 col-lg-10 px-md-4 mb-5" style="margin-top: 10px;">
-	<div class="card col-md-12 p-3 mb-3">
-		<div class="card-header mb-2">
-			<h3 class="text-primary">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-					<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-					<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-				</svg>Cinem@s
+<main class="p-5  bg-light">
+<div class="justify-content-md-center align-items-center ">
+	<div class="card shadow col-md-12 mb-3">
+		<div class="card-header text-start">
+			<h3>
+      <i class="bi bi-pencil-square fs-4"></i> Cinem@s
 			</h3>
 		</div> <br />
 		<div class="card-body">
-			<form id="form1" action="ej4.php" method="post" class="row g-3 needs-validation" novalidate>
-				<div class="col-md-5">
+			<form id="form1" action="verificaCinema.php" method="post" class="row g-3 needs-validation" novalidate>
+				<div class="col-md-6">
 					<label class="form-label">Titulo:</label>
 					<input type="text" name="titulo" id="titulo" class="form-control validate" required>
 					<div class="invalid-feedback">
@@ -26,42 +20,42 @@ include_once(STRUCTURE_PATH . "head.php");
 					</div>
 				</div>
 
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<label class="form-label">Actores:</label>
 					<input type="text" name="actores" id="actores" class="form-control validate" />
 					<div class="invalid-feedback">
 						Por favor, ingrese actores.
 					</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<label class="form-label">Director:</label>
 					<input type="text" name="director" id="director" class="form-control validate" />
 					<div class="invalid-feedback">
 						Por favor, ingrese un director.
 					</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<label class="form-label">Gui&oacute;n:</label>
 					<input type="text" name="guion" id="guion" class="form-control validate" />
 					<div class="invalid-feedback">
 						Por favor, ingrese Gui&oacute;n.
 					</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<label class="form-label">Producci&oacute;n:</label>
 					<input type="text" name="produccion" id="produccion" class="form-control validate" />
 					<div class="invalid-feedback">
 						Por favor, ingrese una Producci&oacute;n.
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<label class="form-label">A&ntilde;o :</label>
 					<input type="text" name="anio" id="anio" class="form-control validate" maxlength="4" title="Ingrese un A&ntilde;o  valido (4 digitos numericos)">
 					<div class="invalid-feedback">
 						Por favor, ingrese un A&ntilde;o Valido.
 					</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<label class="form-label">Nacionalidad:</label>
 					<input type="text" name="nacionalidad" id="nacionalidad" class="form-control validate" />
 					<div class="invalid-feedback">
@@ -84,7 +78,7 @@ include_once(STRUCTURE_PATH . "head.php");
 					</div>
 				</div>
 
-				<div class="col-md-5">
+				<div class="col-md-4">
 					<label class="form_label">Duraci&oacute;n:</label>
 					<input type="number" id="duracion" name="duracion" class="form-control validate" maxlength="3">(minutos)
 					<div class="invalid-feedback">
@@ -93,11 +87,19 @@ include_once(STRUCTURE_PATH . "head.php");
 				</div>
 
 				<div class="col-md-6">
-					<label class="form-label" name="restricciones" id="restricciones">Restricciones de edad: </label><br>
+					<label class="form-label" name="restricciones" id="restricciones">Restricciones de edad:</label>
+					<div class="form-check form-check-inline">
 					<input class="form-check-input" type="radio" id="todopublico" name="restricciones" value="Todos los publicos" />Todo publico.
-					<input class="form-check-input" type="radio" id="mayores7" name="restricciones" value="Mayores de 7" />Mayores de 7 a&ntilde;os
-					<input class="form-check-input" type="radio" id="mayores18" name="restricciones" value="Mayores de 18" />Mayores de 18 a&ntilde;os <br /> <br />
-					<div class="invalid-feedback"></div>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" id="mayores7" name="restricciones" value="Mayores de 7" />Mayores de 7 a&ntilde;os
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" id="mayores18" name="restricciones" value="Mayores de 18" required/>Mayores de 18 a&ntilde;os <br /> <br />
+					</div>
+					<div class="invalid-feedback">
+
+					</div>
 				</div>
 				<div class="col-md-6">
 					<label class="form-label">Sinopsis:</label>
@@ -121,6 +123,6 @@ include_once(STRUCTURE_PATH . "head.php");
 
 		</div>
 	</div>
+</div>
 </main>
-
 <?php include(STRUCTURE_PATH . "footer.php"); ?>
