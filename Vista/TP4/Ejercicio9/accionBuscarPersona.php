@@ -1,7 +1,8 @@
 <?php
-include_once("../Estructura/cabecera.php");
-include_once('../../Control/ControlPersona.php');
-include_once('../../configuracion.php');
+include_once("../../../includes/configuracion.php");
+include_once(STRUCTURE_PATH . "head.php");
+include_once('../../../Control/TP4/ControlPersona.php');
+//  include_once("../../util/funciones.php");
 ?>
 
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-4" style="margin-top: 10px;">
@@ -14,8 +15,8 @@ include_once('../../configuracion.php');
             $personaEncontrada = $persona->buscarPersona($datos); // Devuelve el objeto Persona
 
             if ($personaEncontrada) {
-                ?>
-                <form class="d-flex flex-column needs-validation" method="GET" action="accionActualizaPersona.php" id="form9" name="form9" onsubmit="return validarActualizacion()">  
+            ?>
+                <form class="d-flex flex-column needs-validation" method="GET" action="accionActualizaPersona.php" id="form9" name="form9" onsubmit="return validarActualizacion()">
                     <div class="row">
                         <div class="col-md-6">
                             <input type="hidden" name="nroDni" id="nroDni" value="<?php echo $personaEncontrada->getNroDNI(); ?>">
@@ -58,12 +59,12 @@ include_once('../../configuracion.php');
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
-                       <button class="btn btn-primary me-2" type="submit" id="Enviar" name="Enviar">Enviar</button>
-                       <button class="btn btn-light" type="reset" name="reset" id="reset">Borrar</button>
+                        <button class="btn btn-primary me-2" type="submit" id="Enviar" name="Enviar">Enviar</button>
+                        <button class="btn btn-light" type="reset" name="reset" id="reset">Borrar</button>
                     </div>
 
                 </form>
-                <?php
+            <?php
             } else {
                 echo "Persona no encontrada";
             }
@@ -72,6 +73,4 @@ include_once('../../configuracion.php');
     </div>
 </main>
 
-<?php
-include("../Estructura/pie.php");
-?>
+<?php include(STRUCTURE_PATH . "footer.php"); ?>

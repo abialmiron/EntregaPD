@@ -9,33 +9,36 @@ include_once(STRUCTURE_PATH . "head.php");
             <h3 class="text-primary">Ingresar auto:</h3>
         </div>
         <div class="card-body">
-            <form class="d-flex flex-column needs-validation" method="post" action="accionNuevoAuto.php" id="form7" name="form7" onsubmit="return validarAuto()">
+            <form class="d-flex flex-column needs-validation" novalidate method="post" action="accionNuevoAuto.php" id="form7" name="form7" onsubmit="return validarAuto()">
                 <div class="row">
                     <div class="col-md-3 mt-3">
                         <label class="form-label">Patente:</label>
-                        <input type="text" name="patente" id="patente" class="form-control validate" maxlength="7">
+                        <input type="text" pattern="[A-Z]{3}\s[0-9]{3}" name="patente" id="patente" class="form-control validate" required>
                         <div class="invalid-feedback">
                             Ingrese su patente.
                             ejemplo (ABC 123)
                         </div>
+                        <div class="valid-feedback">
+                            Correcto!
+                        </div>
                     </div>
                     <div class="col-md-3 mt-3">
                         <label class="form-label">Marca:</label>
-                        <input type="text" name="marca" id="marca" class="form-control validate" maxlength="20">
+                        <input type="text" name="marca" id="marca" class="form-control validate" maxlength="20" required>
                         <div class="invalid-feedback">
                             Por favor, ingrese una marca.
                         </div>
                     </div>
                     <div class="col-md-3 mt-3">
                         <label class="form-label">Modelo:</label>
-                        <input type="text" name="modelo" id="modelo" class="form-control validate">
+                        <input type="text" name="modelo" id="modelo" class="form-control validate" required>
                         <div class="invalid-feedback">
                             Por favor, ingrese caracteres numericos.
                         </div>
                     </div>
                     <div class="col-md-3 mt-3">
                         <label class="form-label">DNI Dueño:</label>
-                        <input type="text" name="DNI" id="DNI" class="form-control validate">
+                        <input type="text" name="DNI" id="DNI" class="form-control validate" required>
                         <div class="invalid-feedback">
                             Por favor, ingrese su DNI (solo numeros).
                         </div>

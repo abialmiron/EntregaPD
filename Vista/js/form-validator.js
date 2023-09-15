@@ -111,23 +111,23 @@
     }
     
     
-    function validatePatente(patenteInput) {
-        // Debe tener exactamente 6 caracteres
-        if (patenteInput.value.length !== 6) {
-            patenteInput.setCustomValidity("La patente debe tener exactamente 6 caracteres.")
-            return false
-        }
+    // function validatePatente(patenteInput) {
+    //     // Debe tener exactamente 6 caracteres
+    //     if (patenteInput.value.length !== 6) {
+    //         patenteInput.setCustomValidity("La patente debe tener exactamente 6 caracteres.")
+    //         return false
+    //     }
 
-        // Debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden
-        if (!/^[A-Za-z]{3}[0-9]{3}$/.test(patenteInput.value)) {
-            patenteInput.setCustomValidity("La patente debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden.")
-            return false
-        }
+    //     // Debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden
+    //     if (!/^[A-Za-z]{3}[0-9]{3}$/.test(patenteInput.value)) {
+    //         patenteInput.setCustomValidity("La patente debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden.")
+    //         return false
+    //     }
 
-        // La patente es válida
-        patenteInput.setCustomValidity("")
-        return true
-    }
+    //     // La patente es válida
+    //     patenteInput.setCustomValidity("")
+    //     return true
+    // }
 
 
 
@@ -348,18 +348,21 @@
   }
   
   
-  function validarDni() {
-    var dniInput = document.getElementById("DNI");
-    var dniValue = dniInput.value.trim();
-  
-    if (dniValue === "" || isNaN(dniValue) || dniValue.length != 8) {
-        dniInput.classList.add("is-invalid");
-        return false;
-    } else {
-        dniInput.classList.remove("is-invalid");
-        return true;
-    }
+function validarDni() {
+  var dniInput = document.getElementById("DNI");
+  var dniValue = dniInput.value.trim();
+
+  if (dniValue === "" || isNaN(dniValue) || dniValue.length != 8) {
+    dniInput.classList.remove("is-valid");
+    dniInput.classList.add("is-invalid");
+    return false;
+  } else {
+    dniInput.classList.remove("is-invalid");
+    dniInput.classList.add("is-valid");
+    return true;
   }
+}
+
   
   
   

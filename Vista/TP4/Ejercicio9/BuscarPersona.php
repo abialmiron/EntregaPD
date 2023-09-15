@@ -13,10 +13,13 @@ include_once(STRUCTURE_PATH . "head.php");
                 <div class="form-group row col-md-9">
                     <label>Ingrese un DNI:</label>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" id="DNI" name="DNI">
+                        <input type="number" class="form-control" id="DNI" name="DNI" required pattern="\d{8}">
                         <div class="invalid-feedback">
                             Por favor, ingrese un DNI valido.
                         </div>
+                    </div>
+                    <div class="valid-feedback">
+                        Correcto!
                     </div>
                     <div class="col">
                         <button type="submit" class="btn btn-primary">Buscar</button>
