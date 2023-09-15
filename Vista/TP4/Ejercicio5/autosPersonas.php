@@ -1,7 +1,9 @@
 
-
-<?php include_once ("../Estructura/cabecera.php"); ?>
-
+<?php
+include_once("../../../includes/configuracion.php");
+include_once(STRUCTURE_PATH . "head.php");
+include_once('../../../Control/TP4/ControlPersona.php');
+?>
 <main class="col-md-6 ms-sm-auto col-lg-10 px-md-4"  style="margin-top: 10px;">
     <div class="card col-sm-10 p-3">
         <div class="card-header">
@@ -26,7 +28,4 @@
         </div>
     </div>
 </main>
-
-<?php include ("../Estructura/pie.php"); ?>
-
-
+<?php include(STRUCTURE_PATH . "footer.php"); ?>
