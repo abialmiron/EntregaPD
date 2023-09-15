@@ -36,10 +36,8 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP2/Ejercicio1/index.php">Ejercicio 1</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP2/Ejercicio2/index.php">Ejercicio 2</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP2/Ejercicio3/index.php">Ejercicio 3</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP2/Ejercicio4/index.php">Ejercicio 4</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP2/Vista/Ej1/index.php">Ejercicio 3</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP2/Vista/Ej2/index.php">Ejercicio 4</a></li>           
           </ul>
         </li>
         <li class="nav-item dropdown">
