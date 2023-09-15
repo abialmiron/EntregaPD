@@ -1,19 +1,15 @@
 <?php
 class control_2{
     public function verificarPass($datos,$usuarios){
-        $usuarioEncontrado = null;
-        $usuarioIngresado= $datos["usuario"];
-        $claveIngresada=$datos["clave"];
-        foreach ($usuarios as $usuarioExistente) {
-            if ($usuarioExistente['usuario'] === $usuarioIngresado && $usuarioExistente['clave'] === $claveIngresada) {
-                $usuarioEncontrado = $usuarioExistente;
-                break; } }
-        if ($usuarioEncontrado) {
-            $retorno= '¡Bienvenido, ' . $usuarioEncontrado['usuario'] . '!';
-        } else {
-            $retorno= 'Error: Usuario o contraseña incorrectos.';
-        }
-        return $retorno;}
+			$retorno= 'Error: Usuario o contraseña incorrectos.';
+			$usuarioIngresado= $datos["usuario"];
+			$claveIngresada=$datos["password"];
+			foreach ($usuarios as $usuarioExistente) {
+				if ($usuarioExistente['usuario'] === $usuarioIngresado && $usuarioExistente['password'] === $claveIngresada) 
+					$retorno= '¡Bienvenido, ' . $usuarioIngresado . '!';
+			}
+			return $retorno;
+		}
 
 public function informacion($datos){
     $return=[];
