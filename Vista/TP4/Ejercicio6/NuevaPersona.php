@@ -9,25 +9,25 @@ include_once(STRUCTURE_PATH . "head.php");
             <h3 class="text-primary">Ingresar Persona:</h3>
         </div>
         <div class="card-body">
-            <form class="d-flex flex-column  needs-validation" method="post" action="accionNuevaPersona.php" id="form6" name="form6">
+            <form class="d-flex flex-column  needs-validation" novalidate method="post" action="accionNuevaPersona.php" id="form6" name="form6">
                 <div class="row">
                     <div class="col-md-4">
                         <label class="form-label">Nombre:</label>
-                        <input type="text" name="nombre" id="nombre" class="form-control validate" maxlength="30">
+                        <input type="text" name="nombre" id="nombre" class="form-control validate" maxlength="30" required>
                         <div class="invalid-feedback">
                             Por favor, ingrese caracteres validos.
                         </div>
                     </div>
                     <div class="col-md-4">
                         <label class="form-label">Apellido:</label>
-                        <input type="text" name="apellido" id="apellido" class="form-control validate" maxlength="30">
+                        <input type="text" name="apellido" id="apellido" class="form-control validate" maxlength="30" required>
                         <div class="invalid-feedback">
                             Por favor, ingrese caracteres validos.
                         </div>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">DNI:</label>
-                        <input type="text" name="DNI" id="DNI" class="form-control validate">
+                        <input type="text" name="DNI" id="DNI" class="form-control validate" required>
                         <div class="invalid-feedback">
                             Por favor, ingrese solo numeros.
                         </div>
@@ -36,14 +36,14 @@ include_once(STRUCTURE_PATH . "head.php");
                 <div class="row">
                     <div class="col-md-4 mt-3">
                         <label class="form-label"> Fecha de Nacimiento:</label>
-                        <input type="date" name="fechaNac" id="fechaNac" class="form-control validate">
+                        <input type="date" name="fechaNac" id="fechaNac" class="form-control validate" required>
                         <div class="invalid-feedback">
                             Por favor, ingrese su fecha de nacimiento.
                         </div>
                     </div>
                     <div class="col-md-4 mt-3">
                         <label class="form-label"> Telefono:</label>
-                        <input type="text" name="telefono" id="telefono" class="form-control validate">
+                        <input type="text" name="telefono" id="telefono" class="form-control validate" required>
                         <div class="invalid-feedback">
                             Por favor, ingrese su telefono.
                         </div>
@@ -51,7 +51,7 @@ include_once(STRUCTURE_PATH . "head.php");
 
                     <div class="col-md-4 mt-3">
                         <label class="form-label"> Domicilio:</label>
-                        <input type="text" name="domicilio" id="domicilio" class="form-control validate">
+                        <input type="text" name="domicilio" id="domicilio" class="form-control validate" required>
                         <div class="invalid-feedback">
                             Por favor, ingrese su domicilio.
                         </div>
