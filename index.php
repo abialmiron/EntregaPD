@@ -11,7 +11,7 @@ include_once(STRUCTURE_PATH.'head.php');
               <div class=" col-lg-4 col-sm-6 col-12" >
                 <div class="card" >
                   <div class="card-header fs-4">
-                    Alarcón, Abigail Juliana
+                    Almiron, Abigail Juliana
                   </div>
                   <div class="card-body">
                       <p class="card-text text-start fs-6">

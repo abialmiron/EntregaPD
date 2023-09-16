@@ -10,11 +10,11 @@ include_once(STRUCTURE_PATH . "head.php");
         <h3>Buscar Auto:</h3>
       </div>
       <div class="card-body">
-          <form class="needs-validation"  method="get" action="accionBuscarAuto.php" name="form" id="form"  onsubmit="return validarFormulario()">
+          <form class="needs-validation" method="get" action="accionBuscarAuto.php" name="formBuscaAuto" id="formBuscaAuto"  onsubmit="return validarFormulario()">
               <div class="form-group row ">
                   <label class="text-start">Ingrese una patente:</label>
                   <div class="col-8">
-                      <input type="text" class="form-control validate" id="patente" name="patente">
+                      <input type="text" class="form-control" id="patente" name="patente">
                       <div class="invalid-feedback">
                             Por favor, ingrese una patente válida.
                             <br>* La patente debe tener sólo 6 caracteres.

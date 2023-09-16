@@ -394,27 +394,27 @@ $(document).ready(function () {
 
 function validarFormulario() {
     var patenteInput = document.getElementById("patente");
-    mensaje="";
-    respuesta=true;
+    var mensaje="";
+    var respuesta=true;
     patenteInput.classList.remove("is-invalid");
 
     // Debe tener exactamente 6 caracteres
     if (patenteInput.value.length !== 6) {
         patenteInput.classList.add("is-invalid");
         mensaje += "La patente debe tener exactamente 6 caracteres.";
-        respuesta= false
-    }else patenteInput.classList.remove("is-invalid");
+        respuesta= false;
+    }else {patenteInput.classList.remove("is-invalid");}
         
 
     // Debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden
     if (!/^[A-Za-z]{3}[0-9]{3}$/.test(patenteInput.value)) {
         patenteInput.classList.add("is-invalid");
         mensaje +="La patente debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden.";
-        respuesta = false
-    }else patenteInput.classList.remove("is-invalid");
+        respuesta = false;
+    }else {patenteInput.classList.remove("is-invalid");}
     
     // La patente es válida
-    patenteInput.setCustomValidity(mensaje);   
+    //patenteInput.setCustomValidity(mensaje);   
     return respuesta;
     
 }
