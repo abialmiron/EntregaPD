@@ -394,19 +394,30 @@ $(document).ready(function () {
 
 function validarFormulario() {
     var patenteInput = document.getElementById("patente");
-    var patente = patenteInput.value.trim();
+    mensaje="";
+    respuesta=true;
+    patenteInput.classList.remove("is-invalid");
 
-    if (patente === "") {
-        // Mostrar error si la patente está vacía
+    // Debe tener exactamente 6 caracteres
+    if (patenteInput.value.length !== 6) {
         patenteInput.classList.add("is-invalid");
-        return false; // Evitar el envío del formulario
-    } else {
+        mensaje += "La patente debe tener exactamente 6 caracteres.";
+        respuesta= false
+    }else patenteInput.classList.remove("is-invalid");
         
-        patenteInput.classList.remove("is-invalid");
-        return true; // Envía el formulario
-    }
-}
 
+    // Debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden
+    if (!/^[A-Za-z]{3}[0-9]{3}$/.test(patenteInput.value)) {
+        patenteInput.classList.add("is-invalid");
+        mensaje +="La patente debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden.";
+        respuesta = false
+    }else patenteInput.classList.remove("is-invalid");
+    
+    // La patente es válida
+    patenteInput.setCustomValidity(mensaje);   
+    return respuesta;
+    
+}
 
 function validarDni() {
     var dniInput = document.getElementById("DNI");
