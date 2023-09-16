@@ -17,7 +17,6 @@ include_once('../../../Control/TP4/ControlPersona.php');
         echo "No se encontró un dueño con ese DNI. <br> 
         <div class='d-flex justify-content-end mt-4'> 
         <a href='../ej6/index.php' class='btn btn-primary float-end'>Registrarse Aquí</a> 
-        <a href='../ej7/index.php' class='btn btn-secundary float-end'>Volver</a>
          </div> <br>";
       } else echo $datosAuto;
       ?>

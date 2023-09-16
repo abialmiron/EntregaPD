@@ -1,10 +1,9 @@
-
-    <?php
-    include_once ("../Estructura/cabecera.php");
-    include_once ('../../control/control_3.php');
-    include_once("../../utiles/funciones.php");
-    include_once ('../../control/Archivos.php');
-    ?>
+<?php
+include_once("../../../includes/configuracion.php");
+include_once(STRUCTURE_PATH . "head.php");
+include_once(ROOT_PATH.'Control/TP3/Archivos.php');
+include_once(ROOT_PATH.'Control/TP3/control_3.php');
+?>
 <main class="p-5 text-center bg-light">
 <div class="justify-content-md-center align-items-center ">
 <div class="card shadow  col-lg-8  mx-auto">
@@ -46,7 +45,5 @@
     </div>
   </div>
 </main>
-    <?php
-       include ("../Estructura/pie.php");
-    ?>
-    
+<?php include(STRUCTURE_PATH . "footer.php"); ?>
+

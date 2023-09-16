@@ -11,7 +11,7 @@ include_once (STRUCTURE_PATH."head.php");
                         <h3>Verificación de Número</h3>
                     </div>
                     <div class="card-body">
-                        <form class="needs-validation" novalidate method="post" action="vernumero.php" name="form1" id="form1">
+                        <form class="needs-validation" novalidate method="post" action="vernumero.php" name="formNumero" id="formNumero">
                             <div class="form-group text-start ">
                                 <label for="numero">Ingrese un número:</label>
                                 <input type="text" class="form-control validate" id="numero" name="numero" required>

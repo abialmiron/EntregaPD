@@ -11,7 +11,7 @@ include_once(STRUCTURE_PATH . "head.php");
 				</h3>
 			</div> <br />
 			<div class="card-body">
-				<form id="form1" action="verificaCinema.php" method="post" class="row g-3 needs-validation" novalidate>
+				<form id="form1" name="form1" action="verificaCinema.php" method="post" class="row g-3 needs-validation">
 					<div class="col-md-6">
 						<label class="form-label">Titulo:</label>
 						<input type="text" name="titulo" id="titulo" class="form-control validate" required>

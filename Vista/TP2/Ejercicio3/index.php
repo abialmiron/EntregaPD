@@ -10,7 +10,7 @@ include_once(STRUCTURE_PATH . "head.php");
             <h3>LOGIN</h3>
         </div>
         <div class="card-body">
-            <form class="d-flex flex-column needs-validation" novalidate method="post" action="verificaPass.php" id="form" name="form">
+            <form class="d-flex flex-column needs-validation" method="post" action="verificaPass.php" id="form" name="form">
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon1">

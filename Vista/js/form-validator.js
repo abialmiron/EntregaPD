@@ -1,4 +1,4 @@
- (function () {
+ /*(function () {
   'use strict'
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -506,6 +506,7 @@ function validarDni() {
     });
   });
   */
+ /*
   function validarAuto() {
     var isValid = true;
     var patente = document.getElementById("patente");
@@ -622,4 +623,4 @@ function validarDni() {
     
         return isValid;
     }
-    
+    */
