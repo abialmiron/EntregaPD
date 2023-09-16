@@ -10,11 +10,11 @@ include_once('../../../Control/TP4/ControlPersona.php');
             <h3 class="text-primary">Buscar autos vinculados:</h3>
         </div>
         <div class="card-body">
-        <form class="d-flex flex-column needs-validation" novalidate method="get" action="accionAutosPersonas.php" name="form5" id="form5">
+        <form class="d-flex flex-column needs-validation" novalidate method="get" action="accionAutosPersonas.php" name="form5" id="form5" onsubmit="return validarDni()">
         <div class="form-group row col-md-9">
             <label for="numero">Ingrese un DNI:</label>
             <div class="col-md-6">
-                <input type="number" class="form-control validate" id="DNI" name="DNI" required>
+                <input type="text" class="form-control" id="DNI" name="DNI">
                 <div class="invalid-feedback">
                    El DNI no es válido.
                 </div>

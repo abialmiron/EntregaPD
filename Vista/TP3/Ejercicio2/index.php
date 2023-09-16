@@ -2,9 +2,11 @@
 include_once("../../../includes/configuracion.php");
 include_once(STRUCTURE_PATH . "head.php");
 ?>
-    <div class="card col-md-9 mx-auto p-3">
+    <main class="p-5 text-center bg-light">
+<div class="justify-content-md-center align-items-center ">
+    <div class="card shadow col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto">
         <div class="card-header">
-            <h3 class="text-primary">Subir archivo (solo .text):</h3>
+            <h3>Subir archivo (solo .text)</h3>
         </div>
         <div class="card-body">
             <form action="accion.php" method="post" enctype="multipart/form-data" class="input-group validate" onsubmit="return validarArchivo()">
@@ -16,5 +18,8 @@ include_once(STRUCTURE_PATH . "head.php");
             </form>
         </div>
     </div>
+    </div>
+    </div>
+    </main>
 
 <?php include(STRUCTURE_PATH . "footer.php"); ?>

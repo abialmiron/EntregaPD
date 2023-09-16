@@ -23,7 +23,7 @@ class Archivos {
     }
 
     public function cargar() {
-        $targetDir = "uploads/";
+        $targetDir = ROOT_PATH."uploads/";
         $targetFile = $targetDir . $_FILES["archivo"]["name"];
         
         // Verificar si el directorio de destino existe, si no, créalo

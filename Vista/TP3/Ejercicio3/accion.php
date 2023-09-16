@@ -1,12 +1,16 @@
-<?php
-include_once("../../../includes/configuracion.php");
-include_once(STRUCTURE_PATH . "head.php");
-include_once(ROOT_PATH.'Control/TP3/Archivos.php');
-include_once(ROOT_PATH.'Control/TP3/control_3.php');
 
-?>
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5" style="margin-top: 10px;">
-<div class="card w-50 mb-5">
+    <?php
+    include_once ("../Estructura/cabecera.php");
+    include_once ('../../control/control_3.php');
+    include_once("../../utiles/funciones.php");
+    include_once ('../../control/Archivos.php');
+    ?>
+<main class="p-5 text-center bg-light">
+<div class="justify-content-md-center align-items-center ">
+<div class="card shadow  col-lg-8  mx-auto">
+  <div class="card-header">
+  <h3>Detalles de la pelicula</h3>
+  </div>
     <div class="card-body">
     <?php
  if($_FILES["archivo"]["error"]<=0)
@@ -17,7 +21,7 @@ include_once(ROOT_PATH.'Control/TP3/control_3.php');
    $carga=$objArchivo->subirArchivo($datos);
  }
  ?>  
-    <h5 class="card-title">Detalles de la Película</h5>
+
     <ul class="list-group list-group-flush">
              <li class="list-group-item"><strong>Título:</strong> <?php echo $string['titulo']; ?></li>
              <li class="list-group-item"><strong>Actores:</strong> <?php echo $string['actores']; ?></li>
@@ -42,4 +46,7 @@ include_once(ROOT_PATH.'Control/TP3/control_3.php');
     </div>
   </div>
 </main>
-<?php include(STRUCTURE_PATH . "footer.php"); ?>
+    <?php
+       include ("../Estructura/pie.php");
+    ?>
+    

@@ -5,12 +5,15 @@ include_once(ROOT_PATH.'Control/TP3/control_3.php');
 include_once(ROOT_PATH.'Control/TP3/Archivos.php');
 
 ?>
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-3" style="margin-top: 10px;">
- <div style="max-height: calc(100vh - 80px);">
-<div class="card w-50 mt-3">
-    <div class="card-body mt-3">
+<main class="p-5 text-center bg-light">
+<div class="justify-content-md-center align-items-center ">
+<div class="card shadow col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto">
+  <div class="card-header">
+  <h3>Resultado</h3>
+  </div>
+    <div class="card-body">
     <?php
-    $carga="recuerde ingresar documentos pdf o doc";
+    $carga="<h5>Recuerde ingresar documentos pdf o doc</h5>";
     if($_FILES["archivo"]["error"]<=0)
     {   
        $datos=data_submitted();
@@ -19,16 +22,14 @@ include_once(ROOT_PATH.'Control/TP3/Archivos.php');
        if($upload){
       $carga= $objControl->cargar();}
       else{
-        $carga="recuerde ingresar documentos pdf o doc";
+        $carga="<h5>Recuerde ingresar documentos pdf o doc</h5>";
       }
 
     }
     
     ?>  
-
-    <h5 class="card-title">Resultado:</h5>
     <?php echo $carga ?>
-         <div class="d-flex justify-content-end"> <!-- Aplicamos la clase justify-content-end aquí -->
+    <div class="form-group text-end mt-3">
             <a href="index.php" class="btn btn-primary">Volver</a>
         </div>
      </div>
