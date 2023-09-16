@@ -9,11 +9,11 @@ include_once(STRUCTURE_PATH . "head.php");
             <h3 class="text-primary">Buscar persona:</h3>
         </div>
         <div class="card-body">
-            <form class="needs-validation" novalidate method="get" action="accionBuscarPersona.php" name="form" id="form" onchange="return validarDni()" onsubmit="return validarDni()">
+            <form class="needs-validation" novalidate method="get" action="accionBuscarPersona.php" name="form" id="form">
                 <div class="form-group row col-md-9">
                     <label>Ingrese un DNI:</label>
                     <div class="col-md-5">
-                        <input type="number" class="form-control" id="DNI" name="DNI" required pattern="\d{8}">
+                        <input type="number" class="form-control validate" id="DNI" name="DNI" required pattern="\d{8}" required>
                         <div class="invalid-feedback">
                             Por favor, ingrese un DNI valido.
                         </div>

@@ -37,7 +37,23 @@
             event.preventDefault()
             event.stopPropagation()
         }
+        if (form.querySelector('input[name="DNI"]'))
+        if (!validarDNI(form.querySelector('input[name="DNI"]'))) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        if (form.querySelector('input[name="nombre"]'))
+        if (!validarNombre(form.querySelector('input[name="nombre"]'))) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
         
+        if (form.querySelector('input[name="apellido"]'))
+        if (!validarApellido(form.querySelector('input[name="apellido"]'))) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
         // Verfica que otros campos sean válidos
         if (!form.checkValidity()) {
           event.preventDefault()
@@ -111,25 +127,55 @@
     }
     
     
-    // function validatePatente(patenteInput) {
-    //     // Debe tener exactamente 6 caracteres
-    //     if (patenteInput.value.length !== 6) {
-    //         patenteInput.setCustomValidity("La patente debe tener exactamente 6 caracteres.")
-    //         return false
-    //     }
+     function validatePatente(patenteInput) {
+         // Debe tener exactamente 6 caracteres
+         if (patenteInput.value.length !== 6) {
+             patenteInput.setCustomValidity("La patente debe tener exactamente 6 caracteres.")
+             return false
+         }
 
-    //     // Debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden
-    //     if (!/^[A-Za-z]{3}[0-9]{3}$/.test(patenteInput.value)) {
-    //         patenteInput.setCustomValidity("La patente debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden.")
-    //         return false
-    //     }
+         // Debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden
+         if (!/^[A-Za-z]{3}[0-9]{3}$/.test(patenteInput.value)) {
+             patenteInput.setCustomValidity("La patente debe tener tres letras y tres números sin espacios ni caracteres especiales en ese orden.")
+             return false
+         }
 
-    //     // La patente es válida
-    //     patenteInput.setCustomValidity("")
-    //     return true
-    // }
+         // La patente es válida
+         patenteInput.setCustomValidity("")
+         return true
+     }
 
+    function validarDNI(DNIInput) {
+        // Debe tener exactamente 6 caracteres
+        if (isNaN(DNIInput.value) || DNIInput.value.length != 8) {
+            DNIInput.setCustomValidity("El DNI debe tener 8 números.")
+            return false
+        }
 
+        // El DNI es válida
+        DNIInput.setCustomValidity("")
+        return true
+   }
+
+   function validarNombre(NombreInput){
+		if (NombreInput.value.trim.length < 1) {
+			NombreInput.setCustomValidity("El nombre debe completarse.")
+			return false
+		}
+    // El nombre es válido
+    NombreInput.setCustomValidity("")
+    return true
+   }
+
+   function validarApellido(ApellidoInput){
+    if (ApellidoInput.value.trim.length < 1) {
+        ApellidoInput.setCustomValidity("El apellido debe completarse.")
+        return false
+    }
+    // El apellido es válido
+    ApellidoInput.setCustomValidity("")
+    return true
+    }
 
 
 
