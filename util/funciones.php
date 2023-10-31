@@ -46,11 +46,9 @@ function __autoload($class_name){
 spl_autoload_register(function($class_name) {
     $directorys = array(
         $_SESSION['ROOT'].'Modelo/',
+        $_SESSION['ROOT'].'Modelo/TP4/',
         $_SESSION['ROOT'].'Modelo/conector/',
-        $_SESSION['ROOT'].'Modelo/TP5/',
         $_SESSION['ROOT'].'Control/',
-        $_SESSION['ROOT'].'Control/TP5/',
-        
       //  $GLOBALS['ROOT'].'util/class/',
     );
     //print_object($directorys) ;
